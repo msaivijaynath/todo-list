@@ -7,17 +7,16 @@
 
 body {
   min-height: 100vh;
+  background: #0f172a;
   display: flex;
   justify-content: center;
-  align-items: center;
-  background: #0f172a;
-  padding: 20px; /* IMPORTANT FIX */
+  padding: 20px;
 }
 
 /* ✅ FIXED RESPONSIVE CONTAINER */
 .app {
   width: 100%;
-  max-width: 420px;   /* instead of fixed width */
+  max-width: 420px;
   background: #111827;
   padding: 25px;
   border-radius: 16px;
