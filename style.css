@@ -7,16 +7,14 @@
 
 body {
   min-height: 100vh;
-  background: #0f172a;
   display: flex;
   justify-content: center;
-  padding: 20px;
+  align-items: center;
+  background: #0f172a;
 }
 
-/* ✅ FIXED RESPONSIVE CONTAINER */
 .app {
-  width: 100%;
-  max-width: 420px;
+  width: 420px;
   background: #111827;
   padding: 25px;
   border-radius: 16px;
@@ -29,7 +27,6 @@ h1 {
   margin-bottom: 20px;
 }
 
-/* INPUT AREA */
 .input-area {
   display: flex;
   gap: 10px;
@@ -59,7 +56,6 @@ h1 {
   background: #16a34a;
 }
 
-/* STATS */
 .stats {
   display: flex;
   justify-content: space-between;
@@ -68,7 +64,6 @@ h1 {
   color: #9ca3af;
 }
 
-/* LIST */
 .ultasks {
   list-style: none;
   margin-top: 10px;
@@ -88,7 +83,6 @@ h1 {
   flex: 1;
 }
 
-/* BUTTONS */
 .completed {
   background: #3b82f6;
   border: none;
@@ -108,61 +102,7 @@ h1 {
   cursor: pointer;
 }
 
-/* COMPLETED STYLE */
 .completed-line-through span {
   text-decoration: line-through;
   opacity: 0.5;
-}
-
-/* 📱 MOBILE FIX */
-@media (max-width: 480px) {
-
-  body {
-    align-items: flex-start;  /* IMPORTANT FIX */
-  }
-
-  .app {
-    margin-top: 20px;
-    padding: 18px;
-  }
-
-  h1 {
-    font-size: 20px;
-  }
-
-  .input-area {
-    flex-direction: column;
-  }
-
-  #addbtn {
-    width: 100%;
-  }
-
-  .ultasks li {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 10px;
-  }
-
-  .ultasks li div {
-    width: 100%;
-    display: flex;
-    justify-content: flex-end;
-  }
-
-  .stats {
-    font-size: 12px;
-  }
-}
-
-/* TABLET */
-@media (max-width: 768px) {
-  .app {
-    max-width: 90%;
-  }
-}
-
-/* FIX iOS zoom */
-input, button {
-  font-size: 16px;
 }
