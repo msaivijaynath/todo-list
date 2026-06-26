@@ -9,7 +9,7 @@ let com = 0;
 
 function updateCounts() {
   num = todos.length;
-  com = todos.filter(todo => todo.completed).length;
+  com = todos.filter((todo) => todo.completed).length;
 
   numtask.textContent = `tasks : ${num}`;
   comtask.textContent = `completed : ${com}`;
@@ -35,7 +35,7 @@ function addelement() {
 
     list.appendChild(li);
     task.value = "";
-    updateCounts()
+    updateCounts();
   }
 }
 list.addEventListener("click", function (event) {
@@ -45,8 +45,7 @@ list.addEventListener("click", function (event) {
     localStorage.setItem("todos", JSON.stringify(todos));
 
     event.target.parentElement.remove();
-    updateCounts()
-
+    updateCounts();
   }
 });
 list.addEventListener("click", function (event) {
@@ -58,7 +57,7 @@ list.addEventListener("click", function (event) {
     todo.completed = !todo.completed;
     li.classList.toggle("completed-line-through");
     localStorage.setItem("todos", JSON.stringify(todos));
-    updateCounts()
+    updateCounts();
   }
 });
 
@@ -77,19 +76,21 @@ function render() {
     let li = document.createElement("li");
 
     li.innerHTML = `
-    <span>${element.input}</span>
-    <button class="completed">✓</button>
-    <button class="remove">Remove</button>
-`;
-    li.id = element.id
-    if(element.completed){
-        li.classList.add("completed-line-through")
+      <span>${element.input}</span>
+      <div>
+        <button class="completed">✓</button>
+        <button class="remove">✕</button>
+      </div>
+    `;
+    li.id = element.id;
+    if (element.completed) {
+      li.classList.add("completed-line-through");
     }
-    list.appendChild(li)
-});
-updateCounts()
+    list.appendChild(li);
+  });
+  updateCounts();
 }
 
-window.addEventListener("DOMContentLoaded",function(){
-    render()
-})
+window.addEventListener("DOMContentLoaded", function () {
+  render();
+});

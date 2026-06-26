@@ -1,24 +1,27 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Todo-List</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <div class="card">
-    <h2>todo-list</h2>
-    <br>
-    <input type="text" id="task" placeholder="enter a task" autocomplete="off">
-    <button id="addbtn">add</button>
-    <div class="showtask">
-      <ul class="ultasks">
-      </ul>
-      <p id="numtask">tasks : 0</p>
-      <p id="comtask">completed : 0</p>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todo-List</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="app">
+      <h1>Todo App</h1>
+
+      <div class="input-area">
+        <input type="text" id="task" placeholder="Add a new task..." />
+        <button id="addbtn">Add</button>
+      </div>
+
+      <div class="stats">
+        <span id="numtask">Tasks: 0</span>
+        <span id="comtask">Completed: 0</span>
+      </div>
+
+      <ul class="ultasks"></ul>
     </div>
-  </div>
-  <script src="script.js"></script>
-</body>
+    <script src="script.js"></script>
+  </body>
 </html>

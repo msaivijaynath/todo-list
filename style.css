@@ -2,7 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: Arial, sans-serif;
+  font-family: "Inter", sans-serif;
 }
 
 body {
@@ -10,108 +10,99 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: #f4f4f4;
+  background: #0f172a;
 }
 
-.card {
-  width: 400px;
-  background: white;
-  padding: 30px;
-  border-radius: 15px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+.app {
+  width: 420px;
+  background: #111827;
+  padding: 25px;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+  color: white;
 }
 
-h2 {
+h1 {
   text-align: center;
-  color: #333;
   margin-bottom: 20px;
 }
 
-#task {
-  width: 75%;
-  padding: 12px;
-  border: 2px solid #ddd;
-  border-radius: 8px;
-  outline: none;
-  font-size: 16px;
+.input-area {
+  display: flex;
+  gap: 10px;
 }
 
-#task:focus {
-  border-color: #4caf50;
+#task {
+  flex: 1;
+  padding: 12px;
+  border: none;
+  border-radius: 10px;
+  outline: none;
+  background: #1f2937;
+  color: white;
 }
 
 #addbtn {
-  padding: 12px 18px;
+  padding: 12px 16px;
   border: none;
-  border-radius: 8px;
-  background: #4caf50;
+  border-radius: 10px;
+  background: #22c55e;
   color: white;
   cursor: pointer;
-  font-size: 16px;
+  transition: 0.2s;
 }
 
 #addbtn:hover {
-  background: #43a047;
+  background: #16a34a;
 }
 
-.showtask {
-  margin-top: 25px;
+.stats {
+  display: flex;
+  justify-content: space-between;
+  margin: 15px 0;
+  font-size: 14px;
+  color: #9ca3af;
 }
 
 .ultasks {
   list-style: none;
+  margin-top: 10px;
 }
 
 .ultasks li {
   display: flex;
-  align-items: center;
   justify-content: space-between;
-  gap: 10px;
+  align-items: center;
   padding: 12px;
-  margin-bottom: 12px;
-  background: #f8f8f8;
-  border-radius: 8px;
+  background: #1f2937;
+  margin-bottom: 10px;
+  border-radius: 10px;
 }
 
 .ultasks li span {
   flex: 1;
-  word-break: break-word;
 }
 
 .completed {
+  background: #3b82f6;
   border: none;
-  background: #2196f3;
-  color: white;
-  padding: 8px 12px;
+  padding: 6px 10px;
   border-radius: 6px;
+  color: white;
   cursor: pointer;
-}
-
-.completed:hover {
-  background: #1976d2;
+  margin-right: 5px;
 }
 
 .remove {
+  background: #ef4444;
   border: none;
-  background: #f44336;
-  color: white;
-  padding: 8px 12px;
+  padding: 6px 10px;
   border-radius: 6px;
+  color: white;
   cursor: pointer;
-}
-
-.remove:hover {
-  background: #d32f2f;
 }
 
 .completed-line-through span {
   text-decoration: line-through;
-  opacity: 0.6;
-}
-
-#numtask,
-#comtask {
-  margin-top: 12px;
-  font-weight: bold;
-  color: #555;
+  opacity: 0.5;
 }
