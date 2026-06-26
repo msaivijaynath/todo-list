@@ -1,0 +1,117 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #f4f4f4;
+}
+
+.card {
+  width: 400px;
+  background: white;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+#task {
+  width: 75%;
+  padding: 12px;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  outline: none;
+  font-size: 16px;
+}
+
+#task:focus {
+  border-color: #4caf50;
+}
+
+#addbtn {
+  padding: 12px 18px;
+  border: none;
+  border-radius: 8px;
+  background: #4caf50;
+  color: white;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+#addbtn:hover {
+  background: #43a047;
+}
+
+.showtask {
+  margin-top: 25px;
+}
+
+.ultasks {
+  list-style: none;
+}
+
+.ultasks li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 12px;
+  margin-bottom: 12px;
+  background: #f8f8f8;
+  border-radius: 8px;
+}
+
+.ultasks li span {
+  flex: 1;
+  word-break: break-word;
+}
+
+.completed {
+  border: none;
+  background: #2196f3;
+  color: white;
+  padding: 8px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.completed:hover {
+  background: #1976d2;
+}
+
+.remove {
+  border: none;
+  background: #f44336;
+  color: white;
+  padding: 8px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.remove:hover {
+  background: #d32f2f;
+}
+
+.completed-line-through span {
+  text-decoration: line-through;
+  opacity: 0.6;
+}
+
+#numtask,
+#comtask {
+  margin-top: 12px;
+  font-weight: bold;
+  color: #555;
+}
