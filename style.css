@@ -11,10 +11,13 @@ body {
   justify-content: center;
   align-items: center;
   background: #0f172a;
+  padding: 20px; /* IMPORTANT FIX */
 }
 
+/* ✅ FIXED RESPONSIVE CONTAINER */
 .app {
-  width: 420px;
+  width: 100%;
+  max-width: 420px;   /* instead of fixed width */
   background: #111827;
   padding: 25px;
   border-radius: 16px;
@@ -27,6 +30,7 @@ h1 {
   margin-bottom: 20px;
 }
 
+/* INPUT AREA */
 .input-area {
   display: flex;
   gap: 10px;
@@ -56,6 +60,7 @@ h1 {
   background: #16a34a;
 }
 
+/* STATS */
 .stats {
   display: flex;
   justify-content: space-between;
@@ -64,6 +69,7 @@ h1 {
   color: #9ca3af;
 }
 
+/* LIST */
 .ultasks {
   list-style: none;
   margin-top: 10px;
@@ -83,6 +89,7 @@ h1 {
   flex: 1;
 }
 
+/* BUTTONS */
 .completed {
   background: #3b82f6;
   border: none;
@@ -102,15 +109,22 @@ h1 {
   cursor: pointer;
 }
 
+/* COMPLETED STYLE */
 .completed-line-through span {
   text-decoration: line-through;
   opacity: 0.5;
 }
+
+/* 📱 MOBILE FIX */
 @media (max-width: 480px) {
+
+  body {
+    align-items: flex-start;  /* IMPORTANT FIX */
+  }
+
   .app {
-    width: 92%;
+    margin-top: 20px;
     padding: 18px;
-    border-radius: 14px;
   }
 
   h1 {
@@ -119,12 +133,6 @@ h1 {
 
   .input-area {
     flex-direction: column;
-    gap: 8px;
-  }
-
-  #task {
-    width: 100%;
-    font-size: 14px;
   }
 
   #addbtn {
@@ -147,15 +155,15 @@ h1 {
     font-size: 12px;
   }
 }
+
+/* TABLET */
 @media (max-width: 768px) {
   .app {
-    width: 80%;
-  }
-
-  h1 {
-    font-size: 24px;
+    max-width: 90%;
   }
 }
+
+/* FIX iOS zoom */
 input, button {
-  font-size: 16px; /* prevents iOS zoom issue */
+  font-size: 16px;
 }
